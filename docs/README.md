@@ -117,22 +117,7 @@ Stage 5-এ একটা মোড়: **Technical প্রথমবার ২�
 | 5 | Allocation নীতি · FI সংখ্যা লেখা | equity থেকে আয় · net worth ৭× |
 | 6 | বাজি ও kill criteria লেখা | বাজি থেকে আয় · net worth ১০× |
 
----
 
-## 📱 Google Keep — সব stage-এ একই নিয়ম
-
-প্রতি stage-এ **phase-প্রতি একটা note + দুটো স্থায়ী note**, সবগুলো pinned:
-
-| Note | কাজ |
-|---|---|
-| `Stage N · Phase 1 — <নাম>` | সেই phase-এর checklist |
-| `Stage N · Phase 2 — <নাম>` | ... |
-| `Stage N · Exit Criteria (১০)` | শুধু ১০টা criteria — stage জুড়ে pinned |
-| `Brag Document` | সপ্তাহে ৫ মিনিট, শুধু যোগ করে যাবেন — **সব stage জুড়ে একটাই** |
-
-**অলঙ্ঘনীয় নিয়ম:** চলমান অভ্যাস (ব্যায়াম · sync · one-on-one · brag doc) **checklist-এ রাখবেন না**। ওগুলো tick করার জিনিস নয় — ওগুলোর জন্য reminder। প্রতি সপ্তাহে untick করতে করতে ক্লান্ত হয়ে মানুষ পুরো system ছেড়ে দেয়।
-
-**Checkpoint-এ:** phase note-টা archive করুন, exit criteria note-এ টিক দিন। **কখনো মুছবেন না** — শেষে পুরো stage-এর ইতিহাস কাজে লাগবে।
 
 ---
 

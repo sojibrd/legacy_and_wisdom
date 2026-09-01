@@ -250,21 +250,7 @@ Phase 2 দীর্ঘ — ভেতরে **ত্রৈমাসিক checkp
 2. **যেটা নড়েনি — কারণ কি সময়ের অভাব, নাকি লক্ষ্যটাই ভুল ছিল?** *(এই পার্থক্যটাই আসল — সময়ের অভাব মানে পুনর্বণ্টন, ভুল লক্ষ্য মানে criteria বদলানো)*
 3. **আগামী ত্রৈমাসিকে কোন একটা জিনিস বাদ দিলে বাকিগুলো ভালো হবে?**
 
----
 
-## 📱 Google Keep কাঠামো
-
-**৫টা note, pinned:**
-
-| Note | কাজ |
-|---|---|
-| `Stage 1 · Phase 1 — Quick Wins` | Phase 1-এর সব checklist |
-| `Stage 1 · Phase 2 — Deep Work` | Q1/Q2/Q3 checklist |
-| `Stage 1 · Phase 3 — Prove & Position` | শেষ ৬ মাস |
-| `Stage 1 · Exit Criteria (১০)` | শুধু ১০টা criteria — এটা সবসময় pinned থাকবে |
-| `Brag Document` | সপ্তাহে ৫ মিনিট, শুধু যোগ করে যাবেন |
-
-**নিয়ম:** চলমান কাজ (ব্যায়াম, sync, brag doc) checklist-এ tick করার জিনিস নয় — ওগুলো **অভ্যাস**। ওগুলোর জন্য আলাদা reminder রাখুন, checklist-এ নয়। নাহলে প্রতি সপ্তাহে untick করতে করতে ক্লান্ত হয়ে পুরো system ছেড়ে দেবেন।
 
 ---
 
@@ -302,7 +288,7 @@ Phase 2 দীর্ঘ — ভেতরে **ত্রৈমাসিক checkp
 | ৭ | Technical: **Architecture (primary) + Performance (প্রমাণের বাহন)** |
 | ৮ | সঞ্চয়ের বণ্টন: **ক্রমানুসারে** — Buffer → EF ৩ মাস → বিনিয়োগ। (৬ মাসের EF অসম্ভব বলে বাতিল) |
 | ৯ | বিনিয়োগ: **DPS** (education fund) + **সঞ্চয়পত্র ৮৫%** + **mutual fund ১৫%** (শেখার জন্য) |
-| ১০ | Phase 2 ও 3-এর checklist চূড়ান্ত · Google Keep-এ **৫টা note** কাঠামো |
+| ১০ | Phase 2 ও 3-এর checklist চূড়ান্ত · GitHub Issues tracking শুরু |
 
 **Stage 1-এর পরিকল্পনা সম্পূর্ণ।** এরপরের কাজ পরিকল্পনা নয় — **বাস্তবায়ন**।
 
