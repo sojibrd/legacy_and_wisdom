@@ -2,7 +2,7 @@
 
 জীবনের দীর্ঘমেয়াদি রোডম্যাপ — ১০টা stage-এ ভাগ করা, প্রতিটায় Technical Skills, Financial Management, Health ও Family Responsibility-র ভারসাম্য রেখে।
 
-**Tracking:** Google Keep — প্রতি phase-এ একটা note, actionable checklist সহ।
+**Tracking:** GitHub Issues & Projects — প্রতি phase-এ checklist এবং progress monitoring।
 
 ---
 
