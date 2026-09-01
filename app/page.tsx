@@ -1,8 +1,6 @@
-import { notFound } from "next/navigation";
-import DocPage from "./components/DocPage";
-import { getDoc } from "./lib/content";
+import DashboardClient from "./DashboardClient";
+import { getStageTasks } from "./lib/content";
 
 export default function Home() {
-  if (!getDoc([])) notFound();
-  return <DocPage slug={[]} />;
+  return <DashboardClient stageTasks={getStageTasks()} />;
 }

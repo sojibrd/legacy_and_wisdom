@@ -5,8 +5,9 @@ import {
   Noto_Sans_Bengali,
 } from "next/font/google";
 import "./globals.css";
-import { getNav } from "./lib/content";
+import { getNav, getStageSummaries } from "./lib/content";
 import Shell from "./components/Shell";
+import { TrackerProvider } from "./lib/tracker";
 
 const condensed = Barlow_Semi_Condensed({
   variable: "--font-condensed",
@@ -49,7 +50,9 @@ export default function RootLayout({
       className={`${condensed.variable} ${mono.variable} ${bengali.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        <Shell nav={getNav()}>{children}</Shell>
+        <TrackerProvider stages={getStageSummaries()}>
+          <Shell nav={getNav()}>{children}</Shell>
+        </TrackerProvider>
       </body>
     </html>
   );

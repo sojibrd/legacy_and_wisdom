@@ -4,7 +4,8 @@ import { useMemo, useState, type RefObject } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { NavSection } from "../lib/content";
-import { PanelLeftClose, Search, X } from "./icons";
+import { useTracker } from "../lib/tracker";
+import { Check, Lock, PanelLeftClose, Search, X } from "./icons";
 
 interface SidebarProps {
   nav: NavSection[];
@@ -30,6 +31,7 @@ export default function Sidebar({
   const pathname = usePathname();
   const current = pathname.endsWith("/") ? pathname : `${pathname}/`;
   const [search, setSearch] = useState("");
+  const { byRoute } = useTracker();
 
   const query = search.trim().toLowerCase();
   const searching = query.length > 0;
@@ -176,17 +178,39 @@ export default function Sidebar({
                 <span className="chip shrink-0">{section.docs.length}</span>
               </div>
 
-              {section.docs.map((doc) => (
-                <Link
-                  key={doc.route}
-                  href={doc.route}
-                  onClick={onNavigate}
-                  aria-current={current === doc.route}
-                  className="row block px-2.5 py-1.5 text-xs leading-snug"
-                >
-                  {doc.title}
-                </Link>
-              ))}
+              {section.docs.map((doc) => {
+                const stage = byRoute[doc.route];
+
+                return (
+                  <Link
+                    key={doc.route}
+                    href={doc.route}
+                    onClick={onNavigate}
+                    aria-current={current === doc.route}
+                    className="row flex items-center gap-1.5 px-2.5 py-1.5 text-xs leading-snug"
+                  >
+                    {stage && (
+                      <span className="shrink-0 flex">
+                        {!stage.isUnlocked ? (
+                          <span className="t-muted flex" title="লক">
+                            <Lock />
+                          </span>
+                        ) : stage.isComplete ? (
+                          <span className="t-ok flex" title="সম্পন্ন">
+                            <Check />
+                          </span>
+                        ) : null}
+                      </span>
+                    )}
+                    <span className="min-w-0 flex-1 truncate">{doc.title}</span>
+                    {stage && stage.isUnlocked && !stage.isComplete && (
+                      <span className="t-caption t-mono shrink-0">
+                        {stage.done}/{stage.total}
+                      </span>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           ))}
         </nav>

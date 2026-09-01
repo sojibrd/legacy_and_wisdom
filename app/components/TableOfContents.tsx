@@ -45,7 +45,9 @@ export default function TableOfContents({ headings }: { headings: HeadingItem[] 
           <span className="t-label">এই পৃষ্ঠায়</span>
         </div>
 
-        <nav className="flex flex-col gap-0.5 max-h-[calc(100vh-10rem)] overflow-y-auto pr-2">
+        {/* No gap between rows: the rail down the left edge has to be
+            continuous for the active marker to sit on something. */}
+        <nav className="flex flex-col max-h-[calc(100vh-10rem)] overflow-y-auto pr-2">
           {headings.map((heading) => (
             <a
               key={heading.id}
@@ -60,8 +62,8 @@ export default function TableOfContents({ headings }: { headings: HeadingItem[] 
               }}
               aria-current={activeId === heading.id}
               title={heading.text}
-              className={`row block py-1 text-xs leading-snug truncate ${
-                heading.level === 3 ? "pl-4" : "pl-1.5"
+              className={`toc-link block py-0.5 truncate ${
+                heading.level === 3 ? "pl-6" : "pl-3"
               }`}
             >
               {heading.text}

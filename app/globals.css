@@ -371,12 +371,44 @@ body {
     font-weight: 600;
   }
 
+  /* --- Table of contents ------------------------------------------------
+     A different job from `.row`. The nav index marks one chosen destination
+     among a few, so a solid fill reads well there. This list is dense, nested,
+     and its active item moves under the reader as they scroll — a fill would
+     strobe down the page and flatten the indent that carries the h2/h3
+     hierarchy. So the active item is marked on a continuous rail instead, and
+     the indent is left to speak. */
+
+  .toc-link {
+    border-left: var(--t-seam-heavy-width) solid var(--t-seam);
+    color: var(--t-text-muted);
+    font-size: 0.75rem;
+    /* Bengali falls through to a face with far taller ascenders and deeper
+       conjuncts than the condensed Latin beside it. The row is clipped by
+       `truncate`, so a tight leading does not overlap — it crops the matra
+       off the top and the conjuncts off the bottom. Buy the glyphs room. */
+    line-height: 1.85;
+    transition: all 150ms var(--t-ease);
+  }
+
+  .toc-link:hover {
+    border-left-color: var(--t-text-muted);
+    color: var(--t-text-title);
+  }
+
+  .toc-link[aria-current="true"] {
+    border-left-color: var(--t-accent);
+    color: var(--t-accent);
+    font-weight: 600;
+  }
+
   /* --- Focus ----------------------------------------------------------- */
 
   /* Every keyboard-reachable role gets the SAME ring. Left to the browser
      default it all but vanishes on a chassis this dark. */
   .tab:focus-visible,
   .row:focus-visible,
+  .toc-link:focus-visible,
   .chip:focus-visible {
     outline: 2px solid var(--t-accent);
     outline-offset: 2px;
@@ -399,6 +431,57 @@ body {
     background-color: var(--t-gauge-fill);
     box-shadow: var(--t-gauge-fill-glow);
     transition: width 400ms var(--t-ease);
+  }
+
+  /* --- Task box ---------------------------------------------------------
+     The one control that appears inside the prose. It is a role, not a
+     variant of `.control`: a tick has no label, no press travel, and its
+     checked state is the theme's "ok", not its "primary". */
+
+  .task-box {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-top: 0.15rem;
+    border: var(--t-control-border-width) solid var(--t-control-border);
+    border-radius: var(--t-chip-radius);
+    background-color: var(--t-well-bg);
+    color: transparent;
+    transition: all 120ms var(--t-ease);
+  }
+
+  .task-box svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .task-box:hover:not(:disabled) {
+    border-color: var(--t-accent);
+  }
+
+  .task-box[aria-checked="true"] {
+    background-color: var(--t-ok);
+    border-color: var(--t-ok);
+    color: var(--t-app-bg);
+  }
+
+  .task-box:disabled {
+    opacity: var(--t-disabled-opacity);
+    cursor: not-allowed;
+  }
+
+  .task-box:focus-visible {
+    outline: 2px solid var(--t-accent);
+    outline-offset: 2px;
+  }
+
+  .task-done {
+    color: var(--t-text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--t-seam-heavy);
   }
 
   /* --- Modal overlay --------------------------------------------------- */
@@ -528,6 +611,23 @@ body {
     margin-top: 0.35rem;
   }
 
+  /* A checklist is not a bulleted list: the box is the marker. */
+  .doc-prose ul.contains-task-list,
+  .doc-prose ul:has(> li.task-list-item) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .doc-prose li.task-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+
+  .doc-prose li.task-list-item + li.task-list-item {
+    margin-top: 0.5rem;
+  }
+
   .doc-prose li::marker {
     color: var(--t-doc-marker);
   }
@@ -568,6 +668,27 @@ body {
     padding: 0;
     color: inherit;
     font-size: inherit;
+  }
+
+  /* --- Diagrams ---------------------------------------------------------
+     A flowchart is usually wider than the column. It scrolls inside its own
+     box rather than pushing the page sideways — the same bargain the wide
+     tables strike above. */
+
+  .mermaid-figure {
+    background-color: var(--t-well-bg);
+    border: var(--t-well-border-width) solid var(--t-well-border);
+    border-radius: var(--t-well-radius);
+    box-shadow: var(--t-well-shadow);
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .mermaid-figure svg {
+    display: block;
+    margin: 0 auto;
+    max-width: none;
+    height: auto;
   }
 
   /* --- Quotes ---------------------------------------------------------- */

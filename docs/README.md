@@ -11,8 +11,11 @@
 **Framework: Hybrid** — প্রতি stage-এ একটা target duration **এবং** measurable exit criteria।
 সময় শেষ হলে review: criteria পূরণ হয়েছে? না হলে stage extend করব, নাকি criteria অবাস্তব ছিল বলে সেটাই বদলাব।
 
-- প্রতি stage: **১৮–২৪ মাস** → ১০ stage ≈ ১৮–২০ বছর
-- Stage 10 = *Legacy and Wisdom* (আনুমানিক বয়স ৪৮–৫০)
+- প্রতি stage: **১৮–২৪ মাস** → ১০ stage ≈ ২০ বছর
+- শুরু **২০২৬-০৯, বয়স ৩২** → শেষ **~২০৪৬, বয়স ~৫১**
+- Stage 10 = *Legacy and Wisdom* (বয়স **৪৯–৫১**)
+
+> 📌 সব অনুমান ও নিশ্চিত তথ্য এক জায়গায়: **[ASSUMPTIONS.md](ASSUMPTIONS.md)** — কোনো অমিল পেলে ওটাই সঠিক।
 
 ### Exit Criteria-র তিনটা নিয়ম
 
@@ -45,7 +48,7 @@
 | 6 | [Ownership — Build Something of Your Own](stages/stage-06-ownership.md) | ২৪ মাস | 🟡 কাঠামো আঁকা · Stage 5 শেষে পরিমার্জন |
 | 7 | [Peak Load — Hold Without Breaking](stages/stage-07-peak-load.md) | ২৪ মাস | 🟡 কাঠামো আঁকা |
 | 8 | [Independence — Work Becomes a Choice](stages/stage-08-independence.md) | ২৪ মাস | 🟡 কাঠামো আঁকা |
-| 9 | [Launch — Let Go and Rebuild](stages/stage-09-launch.md) | ২৪ মাস | 🟡 কাঠামো আঁকা |
+| 9 | [First Launch — Let One Go, Hold the Rest](stages/stage-09-launch.md) | ২৪ মাস | 🟡 কাঠামো আঁকা |
 | 10 | [**Legacy and Wisdom**](stages/stage-10-legacy-and-wisdom.md) | ২৪ মাস | 🔒 প্রথম দিনেই চূড়ান্ত |
 
 ---
@@ -87,7 +90,7 @@
 | Stage | Technical | Financial | Family | Health |
 |---|---|---|---|---|
 | 1 | **40** | 30 | 10 | 20 |
-| 2 | 30 | **40** | 20 | 10 |
+| 2 | 30 | **40** | 25 | 5 |
 | 3 | **40** | 30 | 20 | 10 |
 | 4 | **40** | 30 | 20 | 10 |
 | 5 | 20 | **40** | 25 | 15 |
@@ -116,22 +119,41 @@ Stage 5-এ একটা মোড়: **Technical প্রথমবার ২�
 
 ---
 
+## 📱 Google Keep — সব stage-এ একই নিয়ম
+
+প্রতি stage-এ **phase-প্রতি একটা note + দুটো স্থায়ী note**, সবগুলো pinned:
+
+| Note | কাজ |
+|---|---|
+| `Stage N · Phase 1 — <নাম>` | সেই phase-এর checklist |
+| `Stage N · Phase 2 — <নাম>` | ... |
+| `Stage N · Exit Criteria (১০)` | শুধু ১০টা criteria — stage জুড়ে pinned |
+| `Brag Document` | সপ্তাহে ৫ মিনিট, শুধু যোগ করে যাবেন — **সব stage জুড়ে একটাই** |
+
+**অলঙ্ঘনীয় নিয়ম:** চলমান অভ্যাস (ব্যায়াম · sync · one-on-one · brag doc) **checklist-এ রাখবেন না**। ওগুলো tick করার জিনিস নয় — ওগুলোর জন্য reminder। প্রতি সপ্তাহে untick করতে করতে ক্লান্ত হয়ে মানুষ পুরো system ছেড়ে দেয়।
+
+**Checkpoint-এ:** phase note-টা archive করুন, exit criteria note-এ টিক দিন। **কখনো মুছবেন না** — শেষে পুরো stage-এর ইতিহাস কাজে লাগবে।
+
+---
+
 ## ফাইল কাঠামো
 
 ```
-Legacy and Wisdom/
-├── README.md                    ← এই ফাইল: সূচি + সব stage-এ প্রযোজ্য নিয়ম
-└── stages/
-    ├── stage-01-foundation.md
-    ├── stage-02-compounding.md
-    ├── stage-03-direction.md
-    ├── stage-04-reach.md
-    ├── stage-05-engine.md
-    ├── stage-06-ownership.md
-    ├── stage-07-peak-load.md
-    ├── stage-08-independence.md
-    ├── stage-09-launch.md
-    └── stage-10-legacy-and-wisdom.md
+legacy_and_wisdom/            ← Next.js সাইট (git repo)
+└── docs/
+    ├── ASSUMPTIONS.md        ← সব অনুমান — সত্যের একমাত্র উৎস
+    ├── README.md             ← এই ফাইল: সূচি + সব stage-এ প্রযোজ্য নিয়ম
+    └── stages/
+        ├── stage-01-foundation.md
+        ├── stage-02-compounding.md
+        ├── stage-03-direction.md
+        ├── stage-04-reach.md
+        ├── stage-05-engine.md
+        ├── stage-06-ownership.md
+        ├── stage-07-peak-load.md
+        ├── stage-08-independence.md
+        ├── stage-09-launch.md
+        └── stage-10-legacy-and-wisdom.md
 ```
 
 প্রতি stage-এর নিজস্ব ফাইলে থাকবে: baseline, pillar ওজন, exit criteria, phase কাঠামো, checklist ও সিদ্ধান্তের লগ।
@@ -174,16 +196,16 @@ Legacy and Wisdom/
 flowchart LR
 
     LA["🗓️ Stage<br/>আপনার বয়স"]
-    A1["1 · Foundation<br/>২৮-৩০ · ১৮ মাস"]
-    A2["2 · Compounding<br/>৩০-৩২"]
-    A3["3 · Direction<br/>৩২-৩৪"]
-    A4["4 · Reach<br/>৩৪-৩৬"]
-    A5["5 · Engine<br/>৩৬-৩৮"]
-    A6["6 · Ownership<br/>৩৮-৪০"]
-    A7["7 · Peak Load<br/>৪০-৪২"]
-    A8["8 · Independence<br/>৪২-৪৪"]
-    A9["9 · Launch<br/>৪৪-৪৬"]
-    A10["10 · Legacy<br/>৪৬-৪৮"]
+    A1["1 · Foundation<br/>৩২-৩৩ · ১৮ মাস"]
+    A2["2 · Compounding<br/>৩৩-৩৫"]
+    A3["3 · Direction<br/>৩৫-৩৭"]
+    A4["4 · Reach<br/>৩৭-৩৯"]
+    A5["5 · Engine<br/>৩৯-৪১"]
+    A6["6 · Ownership<br/>৪১-৪৩"]
+    A7["7 · Peak Load<br/>৪৩-৪৫"]
+    A8["8 · Independence<br/>৪৫-৪৭"]
+    A9["9 · Launch<br/>৪৭-৪৯"]
+    A10["10 · Legacy<br/>৪৯-৫১"]
     LA --> A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7 --> A8 --> A9 --> A10
 
     LT["💼 Technical"]
@@ -212,17 +234,17 @@ flowchart LR
     F10["১৫%<br/>উত্তরাধিকার"]
     LF ~~~ F1 ~~~ F2 ~~~ F3 ~~~ F4 ~~~ F5 ~~~ F6 ~~~ F7 ~~~ F8 ~~~ F9 ~~~ F10
 
-    LM["👨‍👩‍👧 Family<br/>মেয়ের বয়স"]
-    M1["১০% · মেয়ে ~১<br/>সাপ্তাহিক sync"]
-    M2["২০% · ~২-৪<br/>স্কুলে ভর্তি"]
-    M3["২০% · ~৪-৬<br/>ritual · মায়ের যত্ন"]
-    M4["২০% · ~৬-৮<br/>relocation শর্ত"]
-    M5["২৫% · ~৮-১০<br/>যৌথ প্রকল্প"]
-    M6["৩০% · ~১০-১২<br/>কৈশোর one-on-one"]
-    M7["৩৫% · ~১২-১৪<br/>কৈশোর + মা"]
-    M8["৩০% · ~১৪-১৬<br/>বোর্ড পরীক্ষা"]
-    M9["৩৫% · ~১৬-১৮<br/>উড়াল · দাম্পত্য"]
-    M10["৩০% · ~১৮-২০<br/>মায়ের গল্প"]
+    LM["👨‍👩‍👧 Family<br/>সন্তানদের বয়স"]
+    M1["১০% · সন্তান ১<br/>+ সন্তান ২ আসছে"]
+    M2["২৫% · ৪.৪·১.৭<br/>নবজাতক + স্কুল"]
+    M3["২০% · ৬.৪·৩.৭·১<br/>সন্তান ৩ · মায়ের যত্ন"]
+    M4["২০% · ৮.৪·৫.৭·৩<br/>relocation শর্ত"]
+    M5["২৫% · ১০.৪·৭.৭·৫<br/>যৌথ প্রকল্প"]
+    M6["৩০% · ১২.৪·৯.৭·৭<br/>কৈশোর শুরু"]
+    M7["৩৫% · ১৪.৪·১১.৭·৯<br/>কৈশোর + মা"]
+    M8["৩০% · ১৬.৪·১৩.৭·১১<br/>বোর্ড পরীক্ষা"]
+    M9["৩৫% · ১৮.৪·১৫.৭·১৩<br/>প্রথম উড়াল"]
+    M10["৩০% · ২০.৪·১৭.৭·১৫<br/>দুজন এখনো কিশোর"]
     LM ~~~ M1 ~~~ M2 ~~~ M3 ~~~ M4 ~~~ M5 ~~~ M6 ~~~ M7 ~~~ M8 ~~~ M9 ~~~ M10
 
     LH["🩺 Health"]
